@@ -5,7 +5,7 @@ import imutils
 from keras.models import load_model
 from keras.applications.vgg16 import preprocess_input
 
-model = load_model('./model.h5')
+model = load_model("")
 
 def crop_imgs(set_name, add_pixels_value=0):
     """
