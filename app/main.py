@@ -27,7 +27,7 @@ def load_h5_model():
     gdown.download(id=id, output=output, quiet=False)
     return load_model("model.h5")
 
-model = copy.deepcopy(load_h5_model())
+model = load_h5_model()
         
 def crop_imgs(set_name, add_pixels_value=0):
     """
