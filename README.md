@@ -1,2 +1,3 @@
 # CSE3505-MRI-Classification
- Deploying MRI Classifing ML model using streamlit
+
+VIT Chennai CSE3505 J Component MRI Classifying ML model
