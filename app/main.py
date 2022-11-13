@@ -113,16 +113,16 @@ def main():
         ''',unsafe_allow_html=True)
         if prob > 0.5:
             st.markdown(f'''
-            ##### The model predicts that the image <span style="color:lightred">**has a tumor**</span> with a probability of **{prob}**
+            ##### The model predicts that the image <span style="color:#F24C4C">**has a tumor**</span> with a probability of **{prob}**
             ''',unsafe_allow_html=True)
             # Select random number from 80 to 100 and assign it to a severity variable
             severity = np.random.randint(80, 100)
             st.markdown(f'''
-            ##### The tumor has a <span style="color:lightred">severity of **{severity}**</span>
+            ##### The tumor has a <span style="color:#F24C4C">severity of **{severity}**</span>
             ''',unsafe_allow_html=True)
         else:
             st.markdown(f'''
-            ##### The model predicts that the image <span style="color:lightgreen">**does not have a tumor**</span> with a probability of **{100-prob}**
+            ##### The model predicts that the image <span style="color:#5FBDB0">**does not have a tumor**</span> with a probability of **{100-prob}**
             ''',unsafe_allow_html=True)
 
 if __name__ == '__main__':
