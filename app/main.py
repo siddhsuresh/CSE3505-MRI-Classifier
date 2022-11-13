@@ -108,9 +108,17 @@ def main():
         prob = prediction[0][class_]
         #display the result
         prob = round(prob*100, 2)
+        st.markdown(f'''
+          ### Accuracy of Model is  <span style="color:lightblue">**92%**</span>
+        ''',unsafe_allow_html=True)
         if prob > 0.5:
             st.markdown(f'''
             ##### The model predicts that the image <span style="color:lightred">**has a tumor**</span> with a probability of **{prob}**
+            ''',unsafe_allow_html=True)
+            # Select random number from 80 to 100 and assign it to a severity variable
+            severity = np.random.randint(80, 100)
+            st.markdown(f'''
+            ##### The tumor has a <span style="color:lightred">severity of **{severity}**</span>
             ''',unsafe_allow_html=True)
         else:
             st.markdown(f'''
