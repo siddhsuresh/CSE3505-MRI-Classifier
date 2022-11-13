@@ -118,7 +118,7 @@ def main():
             # Select random number from 80 to 100 and assign it to a severity variable
             severity = np.random.randint(80, 100)
             st.markdown(f'''
-            ##### The tumor has a <span style="color:#F24C4C">severity of **{severity}**</span>
+            ##### The tumor has a <span style="color:#F24C4C">severity of **{severity}%**</span>
             ''',unsafe_allow_html=True)
         else:
             st.markdown(f'''
