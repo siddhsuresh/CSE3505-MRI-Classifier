@@ -2,8 +2,6 @@ import streamlit as st
 import numpy as np
 import cv2
 import imutils
-import os
-import tqdm
 from keras.models import load_model
 from keras.applications.vgg16 import preprocess_input
 
