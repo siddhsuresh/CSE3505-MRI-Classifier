@@ -4,12 +4,10 @@ import cv2
 import imutils
 from keras.models import load_model
 from keras.applications.vgg16 import preprocess_input
-import requests
+import urllib.request
 
-# get the model from https://github.com/siddhsuresh/CSE3505-MRI-Classifier/blob/main/app/model.h5 and put it in the same folder as this file
-url = "https://github.com/siddhsuresh/CSE3505-MRI-Classifier/blob/main/app/model.h5"
-r = requests.get(url, allow_redirects=True)
-open('model.h5', 'wb').write(r.content)
+urllib.request.urlretrieve(
+        'https://github.com/siddhsuresh/CSE3505-MRI-Classifier/raw/main/app/model.h5', 'model.h5')
 model = load_model('model.h5')
 
 def crop_imgs(set_name, add_pixels_value=0):
