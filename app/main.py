@@ -109,7 +109,7 @@ def main():
         #display the result
         prob = round(prob*100, 2)
         st.markdown(f'''
-          ### Accuracy of Model is  <span style="color:lightblue">**92%**</span>
+          ### Accuracy of Model is  <span style="color:#2FA4FF">**92%**</span>
         ''',unsafe_allow_html=True)
         if prob > 0.5:
             st.markdown(f'''
