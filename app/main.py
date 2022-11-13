@@ -10,6 +10,16 @@ urllib.request.urlretrieve(
         'https://github.com/siddhsuresh/CSE3505-MRI-Classifier/raw/main/app/model.h5', 'model.h5')
 model = load_model('model.h5')
 
+st.set_page_config(
+    page_title="CSE3505 MRI Classifier",
+    page_icon=":brain:",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': "CSE3505 J Component Final Review - MRI Brain Tumor Detection by Siddharth Suresh, Harsh Deshwal, Kanishka Ghosh",
+
+    }
+)
+
 def crop_imgs(set_name, add_pixels_value=0):
     """
     Finds the extreme points on the image and crops the rectangular out of them
