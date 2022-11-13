@@ -85,7 +85,7 @@ def main():
     - Siddharth Suresh 20BPS1042
     - Kanishka Ghosh 20BPS1125
     ''')
-    st.subheader('Upload the scan to test')
+    st.header('Upload the scan to test')
     image_data = load_image()
     if image_data is not None:
         # get image
