@@ -6,6 +6,10 @@ from keras.models import load_model
 from keras.applications.vgg16 import preprocess_input
 import urllib.request
 
+urllib.request.urlretrieve(
+        'https://github.com/siddhsuresh/CSE3505-MRI-Classifier/raw/main/app/model.h5', 'model.h5')
+model = load_model('model.h5')
+
 st.set_page_config(
     page_title="CSE3505 MRI Classifier",
     page_icon=":brain:",
@@ -16,14 +20,6 @@ st.set_page_config(
     }
 )
 
-@st.cache
-def load_h5_model():
-    urllib.request.urlretrieve(
-        'https://doc-0k-1g-docs.googleusercontent.com/docs/securesc/qg8o8rudll8uros581cppi7lavb7pha0/b4dkjrff1df0a76ehqgafcui991k1gba/1668339825000/01960677327599930294/12654046349221109949/1eVTq8I0uUgxgTqB5e6LA13wF99manJ6j?e=download&ax=AEKYgyQzyzexsNKMLMY9pjVLmboYKmyPMkYR536Sq4OnvuHE3YgHC-nSnzBfw7N1Y4A6G1DNMKdece6Cguc_2cb4ghsPMWmm71atQPvTzf-awQq9OT2ztrTFWDmKLngpp6GsnA3M8qS4WWLa5H1GZY8OoMMy2lBMBT3N76SJ0aguYscEe6WXxRWDGLPRby_06tZd60ZnxCpoevne8xFXLXzR5ATAKa-4ZUWFvy5XITIfLzQ4RLbpe_P39YOVhpnRtOEpO1_yF4QXjDzps58VBgJRt_XhH-ioCDyy_bDIUht-wR-E5kIUhwHj3ut_Jdm4mnDwOO72cm7ZkLY7VaDJSVXjB8LdfHsIXnFARg0tMrMFSKz9kusG7FdMlJD8uOunfNsmwZbEWABksRKXjKcleR_wZfyRGzbFAxq1yPSuSWsaCwZdoftFAoDiyztk4iHsA_fxr7lkJuv9x2kP6zh5pN0jaMi9LEGrx_olRbVWoZ3c48WX31zD0zgs0Ex-y6kfhBDKTuqMtdejdWArInjYlIzRzxfLOv60m0VefNsqhSM1YqG5NKx9BaM49ulc_9t8jWgxq2FiQmXMqhqn3IcyNYFhLxUI_b5OXMvdOO8hGlNaRqPOe1xrLzYDToynZ93bBQSYk7TguYky7Y3qJfnbAcqq8IFbPnfqFBUtYSXTtBRWNWFlJIzl550wSHxh0rqo2pU7Vc_XVqnDsx8btnBFc0r41JAr7vw4CZXB1SbSV3N8PK9koq9hyH2oknq4-mkeA4s-ji0Hs-tNEB8u1EblljSQGuJ2LHgp7XuABwNqwxsmg8TJ1wB2u6HadeGC0YdjQai318g3_lYZ5YgqCX9K0RQzYquru2wRu_lJYV9yod_hoehhQM91qrnnecendui39ZdktA&uuid=fafc07ea-1c4e-43df-8b06-04182f8b4e4a&authuser=0', 'model.h5')
-    return load_model('model.h5')
-
-model = load_h5_model()
-        
 def crop_imgs(set_name, add_pixels_value=0):
     """
     Finds the extreme points on the image and crops the rectangular out of them
