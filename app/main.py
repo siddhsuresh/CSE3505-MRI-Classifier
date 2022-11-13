@@ -71,9 +71,9 @@ def main():
     st.title('MRI Brain Tumor Detection')
     st.subheader('Presented by')
     st.markdown('''
-    - Harsh Deshwal 20BPS11xx
+    - Harsh Deshwal 20BPS1145
     - Siddharth Suresh 20BPS1042
-    - Kanishka Ghosh 20BPS11xx
+    - Kanishka Ghosh 20BPS1125
     ''')
     st.subheader('Upload the scan to test')
     image_data = load_image()
