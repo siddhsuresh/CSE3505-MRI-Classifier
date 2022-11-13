@@ -5,7 +5,7 @@ import imutils
 from keras.models import load_model
 from keras.applications.vgg16 import preprocess_input
 
-model = load_model('https://github.com/siddhsuresh/CSE3505-MRI-Classifier/blob/main/app/model.h5')
+model = load_model('./model.h5')
 
 def crop_imgs(set_name, add_pixels_value=0):
     """
