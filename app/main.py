@@ -11,11 +11,11 @@ urllib.request.urlretrieve(
 model = load_model('model.h5')
 
 st.set_page_config(
-    page_title="CSE3505 MRI Classifier",
+    page_title="CSE3506 MRI Classifier",
     page_icon=":brain:",
     initial_sidebar_state="expanded",
     menu_items={
-        'About': "CSE3505 J Component Final Review - MRI Brain Tumor Detection by Siddharth Suresh, Harsh Deshwal, Kanishka Ghosh",
+        'About': "CSE3505 J Component Final Review - MRI Brain Tumor Detection by Harsh Deswal, Harsh Deswal, Harshvardhan",
 
     }
 )
@@ -77,13 +77,13 @@ def load_image():
 
 
 def main():
-    st.header('CSE3505 J Component Final Review')
+    st.header('CSE3506 J Component Final Review')
     st.title('MRI Brain Tumor Detection')
     st.subheader('Presented by')
     st.markdown('''
-    - Harsh Deshwal 20BPS1145
-    - Siddharth Suresh 20BPS1042
-    - Kanishka Ghosh 20BPS1125
+    - Harsh Deswal 20BPS1145
+    - Harsh Nishad 20BPS1076
+    - Harshvardhan 20BPS1079
     ''')
     st.header('Upload the scan to test')
     image_data = load_image()
